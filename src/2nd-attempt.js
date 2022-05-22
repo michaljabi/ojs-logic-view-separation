@@ -16,23 +16,23 @@ const changeSortDirection = () => {
 	currentDirection = (currentDirection === DIRECTIONS.ASC) ? DIRECTIONS.DESC : DIRECTIONS.ASC;
 }
 
-// Potem PUBLICZNE operacje, które możemy wykonać na danych:
-export function sortByName() {
-	 fruits.sort((f1, f2) => {
-		 const { base1, base2 } = getBaseAccordingToDirection(f1, f2);
-		 return base1.name.localeCompare(base2.name);
-	 })
-	changeSortDirection();
-}
-
-export function sortByPrice() {
-	fruits.sort((e1, e2) => {
-		const { base1, base2 } = getBaseAccordingToDirection(e1, e2)
-		return base1.price - base2.price;
-	});
-	changeSortDirection();
-}
-
-export function getFruitList() {
-	  return fruits;
+export const fruitService = {
+	// PUBLICZNE operacje, które możemy wykonać na danych:
+	sortByName() {
+		fruits.sort((f1, f2) => {
+			const { base1, base2 } = getBaseAccordingToDirection(f1, f2);
+			return base1.name.localeCompare(base2.name);
+		})
+		changeSortDirection();
+	},
+	sortByPrice() {
+		fruits.sort((e1, e2) => {
+			const { base1, base2 } = getBaseAccordingToDirection(e1, e2)
+			return base1.price - base2.price;
+		});
+		changeSortDirection();
+	},
+	getFruitList() {
+		return fruits;
+	}
 }
