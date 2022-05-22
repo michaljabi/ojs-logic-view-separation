@@ -41,3 +41,20 @@ WADY:
   - gdzie są dane? 
   - gdzie nimi manipulujemy? 
   - gdzie jest zarządzanie widokiem?
+
+
+### 2.1 Start to solve it from other side: 
+
+- [2nd-attempt.js](/src/2nd-attempt.js)
+
+Tutaj chcemy ugryźć temat z innej strony. Zostawmy ten `DOM` - zupełnie nie będziemy go dotykać. Zamiast tego przygotujemy sobie odpowiednią obsługę danych, bazując na modułach.
+
+`fruits` - reprezentować będzie nasze dane
+
+jako `export` damy konkretne metody do zarządzania stanem tych danych
+
+> UWAGA:  
+> Tutaj zadanie jest "sprawdzone" w pliku [main.js](/src/main.js) i na razie działa tylko tam.
+
+
+Teraz, nie rozwiązaliśmy jeszcze zadania — jednak nie szkodzi, mamy przygotowane do tego pełne "zaplecze"
