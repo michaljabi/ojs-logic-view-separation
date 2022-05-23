@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "vite --open"
+    "start": "vite --open",
+    "node-solution": "node src/2nd-attempt-final.js"
   },
   "keywords": [],
   "author": "",
@@ -12,5 +13,8 @@
   "devDependencies": {
     "vite": "^2.9.9"
   },
-  "type": "module"
+  "type": "module",
+  "dependencies": {
+    "inquirer": "^8.2.4"
+  }
 }

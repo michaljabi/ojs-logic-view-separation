@@ -58,3 +58,24 @@ jako `export` damy konkretne metody do zarządzania stanem tych danych
 
 
 Teraz, nie rozwiązaliśmy jeszcze zadania — jednak nie szkodzi, mamy przygotowane do tego pełne "zaplecze"
+      
+### 2.2 Finałowa wersja naszego rozwiązania nr 2 — działa pod _Node.js!_
+
+- [2nd-attempt-final.js](/src/2nd-attempt-final.js)
+
+Finalnie, znów nie dotykamy `DOM` :) i to celowo.
+
+Żeby zobaczyć to rozwiązanie, trzeba mieć zainstalowanego [Node.js](https://nodejs.org/en/).
+- puścić komendę:
+```shell
+npm install
+```
+- potem komendą:
+```shell
+npm run node-solution
+```
+Uruchomimy rozwiązane zadanie.
+
+Celowo, rozwiązujemy to w `Node.js` - żeby zobaczyć, że podejście `fruitService` daje nam niezależność. To nieważne gdzie to finalnie zostanie "wyrenderowne". Czy na `DOM` czy gdzie indziej. Nie ma znaczenia.
+
+Mamy "surową logikę" obsługiwania listy owoców i jej sortowania. Niezależnie od tego — gdzie to finalnie się znajdzie.
