@@ -79,3 +79,26 @@ Uruchomimy rozwiązane zadanie.
 Celowo, rozwiązujemy to w `Node.js` - żeby zobaczyć, że podejście `fruitService` daje nam niezależność. To nieważne gdzie to finalnie zostanie "wyrenderowne". Czy na `DOM` czy gdzie indziej. Nie ma znaczenia.
 
 Mamy "surową logikę" obsługiwania listy owoców i jej sortowania. Niezależnie od tego — gdzie to finalnie się znajdzie.
+    
+
+### 3.1 Serio... czas to rozwiązać
+
+- [3rd-attempt.js](/src/3rd-attempt.js)
+
+Teraz działamy w `DOM`! Stosujemy dostęp do `data-*` tak, aby dobrze selektować odpowiednie elementy i mieć odporność na ew. zmiany na drzewie DOM.
+
+Używamy `fruitService`, więc to nie widok determinuje listę danych. Sam `service` nie ma pojęcia, kto z niego korzysta i w jaki sposób, sam jest TOTALNIE odseparowany od widoku.
+
+ZALETY:
+
+- zadziała elastycznie i policzy się dla większej ilości danych
+- rozwiązuje zadanie
+- można dopisać niezależnie nową logikę do `fruitService`
+- sam `fruitService` jest odseparowany i nie wie, kto korzysta z jego danych
+- totalnie nie bazujemy na żadnej strukturze HTML
+- dane mogą być zaciągane z `back-end` jako `JSON`
+- rozwiązanie może być dostarczone jako:
+  - program NODE
+  - serwer NODE (np. REST w Express.js)
+  - program front-endowy z `DOM` 
+  - nie ma to znaczenia, ponieważ to MY decydujemy, jak będziemy przedstawiać dane zawarte i obsługiwane (zarządzane) przez `fruitService` !
